@@ -23,7 +23,7 @@ body{
     background-color:azure;
     border: 4px rgb(67, 66, 66) solid;
     display:block;
-    position: fixed;
+    position: absolute;
     top: 15%;
     left: 25%;
 }
@@ -33,10 +33,10 @@ body{
     height: 40px;
     top:2%;
     left:34%;
-    position:fixed;
+    position:absolute;
     font-size: 24pt;
-    background-color: transparent;
-    border: 3px black inset;
+    background-color:white;
+    border: 3px aqua inset;
     content: center;
     text-align: center;
     padding-top: 2px;
@@ -46,7 +46,7 @@ body{
 footer{
     position: fixed;
     bottom:2%;
-    left:45%;
+    left:5px;;
 }
 
 #canvas {            
@@ -135,4 +135,168 @@ p a:hover{
     cursor: pointer;
     transform: scale(2);
     padding: 10px;
+}
+
+#animations{
+    left: 25%;
+    top: 650px;
+    height: auto;
+    border: 3px rgb(0, 0, 0) inset;
+    border-radius: 10px;
+    width: 800px;
+    position: absolute;
+    text-align: center;
+    margin: 15px;
+}
+
+#a1{ animation: move1 5s 3;}
+@keyframes move1{
+    0% { transform: translateX(0px);}
+    50% { transform: translateX(300px);}
+    100% {transform: translateX(0px);}
+}
+#a2{ animation: move2 5s 5;}
+@keyframes move2{
+    0% {transform: translateX(0px) rotate(0deg);}
+    50% {transform: translateX(500px) rotate(360deg);}
+    100% {transform: translateX(0px) rotate(0deg);}
+}
+#a3{ animation: move3 10s 5;}
+@keyframes move3{
+    0% {transform: translateX(0px) rotate(0deg);}
+    25% {transform: translateX(500px) rotate(360deg);}
+    50% {transform: translateX(0px) rotate(0deg);}
+    75% {transform: translateX(-500px) rotate(-360deg);}
+    100% {transform: translateX(0px) rotate(0deg);}
+}
+
+#transitions{
+    left: 25%;
+    top: 1110px;
+    height: auto;
+    border: 3px black inset;
+    border-radius: 10px;
+    width: 800px;
+    position: absolute;
+    text-align: center;
+    margin: 15px;
+}
+
+#t1{transition: transform 1s;}
+#t1:hover{
+    cursor: pointer;
+    transform: rotateX(145deg);
+}
+#t2{transition: transform 1s;}
+#t2:hover{
+    cursor: pointer;
+    transform: rotateZ(-225deg);
+}
+#t3{transition: transform 2s;}
+#t3:hover{
+    cursor: pointer;
+    transform: rotateY(145deg);
+}
+
+#timingfunctions{
+    left: 25%;
+    top:1570px;
+    height: auto;
+    border: 3px black inset;
+    border-radius: 10px;
+    width: 800px;
+    position: absolute;
+    text-align: center;
+    margin: 15px;
+}
+
+#btn1:hover{
+    cursor: pointer;
+    background-color: #00ff00;
+}
+#btn1{
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    background-color: cornflowerblue;
+
+    transition: all 0.1s ease-in-out;
+    transform: translate3d(0, 0, 0)
+}
+
+#btn2{
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    background-color: cornflowerblue;
+
+    transition: all 0.1s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+#btn2:hover{
+    cursor: pointer;
+    filter: drop-shadow(8px 8px 5px gray);
+}
+
+#btn3{
+    width: 55px;
+    height: 55px;
+    display: inline-block;
+    background-color: cornflowerblue;
+
+    transition: all 0.1s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+#btn3:hover{
+    cursor:crosshair;
+    transform: scale(1.5);
+    background-color: fuchsia;
+}
+
+#btn4{
+    width:55px;
+    height:55px;
+    display: inline-block;
+    background-color: cornflowerblue;
+
+    transition: all 0.1s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+#btn4:hover{
+    cursor:grab;
+    transform: scale(-0.5);
+    filter:hue-rotate(120deg) drop-shadow(6px 8px 13px yellow);    
+}
+
+#movementeffects{
+    left:25%;
+    top: 1800px;
+    height: 450px;
+    border:3px black inset;
+    border-radius: 10px;
+    width: 800px;
+    position: absolute;
+    text-align: center;
+    margin: 15px;
+}
+
+#ball{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff5722;
+    display: inline-block;
+    animation: bounce .5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count:infinite;
+}
+
+@keyframes bounce{
+    from{
+        transform: translate3d(0, 0, 0);
+    }
+    to{
+        transform: translate3d(0, 275px, 0);
+    }
 }
