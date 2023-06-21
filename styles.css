@@ -131,8 +131,9 @@ ul{
     position: absolute;
     text-align: center;
     display: none;
-
+    background-color: white;
     animation:animatetop 0.4s ease;
+    z-index: -5;
 }
 
 #a1{ animation: move1 5s 3;}
@@ -169,6 +170,7 @@ ul{
     margin: 15px;
     display: none;
     animation:animatetop 0.4s ease;
+    z-index: -4;
 }
 
 #t1{transition: transform 1s;}
@@ -200,6 +202,7 @@ ul{
     margin: 15px;
     display: none;
     animation:animatetop 0.4s ease;
+    z-index: -3;
 }
 
 #btn1:hover{
@@ -271,6 +274,8 @@ ul{
     text-align: center;
     display:none;
     animation:animatetop 0.6s ease;
+    z-index:-2;
+    opacity:100%;
 }
 
 #ball{
@@ -307,7 +312,7 @@ ul{
 
 
 li#clmea{
-    color:white;
+    color:rgb(0, 0, 0);
     float:left;
     font-size: 24pt;
     margin:3px;
@@ -318,7 +323,7 @@ li#clmea:hover{
 }
 
 li#clhea{
-    color:white;
+    color:rgb(0, 0, 0);
     float:left;
     font-size:24pt;
     margin:3px;
@@ -329,7 +334,7 @@ li#clhea:hover{
 }
 
 li#cltra{
-    color:white;
+    color:rgb(0, 0, 0);
     float:left;
     font-size: 24pt;
     margin: 3px;
@@ -340,7 +345,7 @@ li#cltra:hover{
 }
 
 li#clana{
-    color:white;
+    color:rgb(0, 0, 0);
     float:left;
     font-size: 24pt;
     margin: 3px;
