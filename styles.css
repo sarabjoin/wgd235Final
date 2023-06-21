@@ -8,10 +8,6 @@ h1{
     color:aqua;
 }
 
-body{
-    width: 100%;
-    height:100%;
-}
 
 .background{
     width: 800px;
@@ -24,16 +20,16 @@ body{
     border: 4px rgb(67, 66, 66) solid;
     display:block;
     position: absolute;
-    top: 15%;
+    top: 100px;
     left: 25%;
 }
 
 .title{
+    position:absolute;
     width: 450px;
     height: 40px;
-    top:2%;
+    top:10px;
     left:34%;
-    position:absolute;
     font-size: 24pt;
     background-color:white;
     border: 3px aqua inset;
@@ -45,15 +41,19 @@ body{
 
 footer{
     position: fixed;
-    bottom:2%;
-    left:5px;;
+    bottom:1%;
+    left:5px;
+    width: 80px;
+    height: auto;
 }
 
 #canvas {            
+    position: absolute;
+    top:500px;
+    left: 25%;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 10px; 
-    margin-top: 520px;
-    margin-left: 471px;
+
 }
 
 #navbar{
@@ -66,7 +66,7 @@ footer{
     display:none;
     margin: 0 auto;
     padding: 2px;
-    width: 8%;
+    width: 9%;
     height: 99%;
 }
 
@@ -92,34 +92,16 @@ li a{
     color: white;
 }
 
+li a:hover{
+    color:aqua;
+}
+
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-p a{
-    font-family: sans-serif;
-    font-size: 1em;
-    color:rgb(22, 54, 77);
-    text-decoration: underline;
-    text-decoration-style:wavy;
-    text-decoration-color: aquamarine;
-    transition: all .2s ease-out;
-    padding: 3px;
-    background: linear-gradient(to bottom,
-        rgba(29, 110, 110, 0) 0%,
-        rgba(29, 110, 100, 0) 50%,
-        rgba(47, 194, 194, 1) 50%,
-        rgba(47, 194, 194, 1) 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 200%;
-}
-
-p a:hover{
-    color:white;
-    background-position: 0 100%;    
-}
 
 .menu{
     font-size: 2em;
@@ -137,16 +119,20 @@ p a:hover{
     padding: 10px;
 }
 
+
+/*shell animations section*/
 #animations{
     left: 25%;
     top: 650px;
-    height: auto;
+    height: 480px;
     border: 3px rgb(0, 0, 0) inset;
     border-radius: 10px;
     width: 800px;
     position: absolute;
     text-align: center;
-    margin: 15px;
+    display: none;
+
+    animation:animatetop 0.4s ease;
 }
 
 #a1{ animation: move1 5s 3;}
@@ -170,16 +156,19 @@ p a:hover{
     100% {transform: translateX(0px) rotate(0deg);}
 }
 
+/*shell transitions section*/
 #transitions{
     left: 25%;
-    top: 1110px;
-    height: auto;
+    top: 650px;
+    height: 470px;
     border: 3px black inset;
     border-radius: 10px;
     width: 800px;
     position: absolute;
     text-align: center;
     margin: 15px;
+    display: none;
+    animation:animatetop 0.4s ease;
 }
 
 #t1{transition: transform 1s;}
@@ -198,9 +187,10 @@ p a:hover{
     transform: rotateY(145deg);
 }
 
-#timingfunctions{
+/*hover effects boxes section*/
+#hovereffects{
     left: 25%;
-    top:1570px;
+    top:650px;
     height: auto;
     border: 3px black inset;
     border-radius: 10px;
@@ -208,6 +198,8 @@ p a:hover{
     position: absolute;
     text-align: center;
     margin: 15px;
+    display: none;
+    animation:animatetop 0.4s ease;
 }
 
 #btn1:hover{
@@ -268,16 +260,17 @@ p a:hover{
     filter:hue-rotate(120deg) drop-shadow(6px 8px 13px yellow);    
 }
 
+/*Ball Section*/
 #movementeffects{
-    left:25%;
-    top: 1800px;
-    height: 450px;
+    position: absolute;
     border:3px black inset;
     border-radius: 10px;
     width: 800px;
-    position: absolute;
+    height: 405px;
+    top:650px;
     text-align: center;
-    margin: 15px;
+    display:none;
+    animation:animatetop 0.6s ease;
 }
 
 #ball{
@@ -291,7 +284,6 @@ p a:hover{
     animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
     animation-iteration-count:infinite;
 }
-
 @keyframes bounce{
     from{
         transform: translate3d(0, 0, 0);
@@ -299,4 +291,61 @@ p a:hover{
     to{
         transform: translate3d(0, 275px, 0);
     }
+}
+
+
+@keyframes animatetop{
+    from{
+        left:-100px;
+        opacity:0;
+    }
+    to{
+        left: 25%;
+        opacity:1;
+    }
+}
+
+
+li#clmea{
+    color:white;
+    float:left;
+    font-size: 24pt;
+    margin:3px;
+}
+li#clmea:hover{
+    cursor: pointer;
+    color:aqua;
+}
+
+li#clhea{
+    color:white;
+    float:left;
+    font-size:24pt;
+    margin:3px;
+}
+li#clhea:hover{
+    cursor: pointer;
+    color: aqua;
+}
+
+li#cltra{
+    color:white;
+    float:left;
+    font-size: 24pt;
+    margin: 3px;
+}
+li#cltra:hover{
+    cursor: pointer;
+    color: aqua;
+}
+
+li#clana{
+    color:white;
+    float:left;
+    font-size: 24pt;
+    margin: 3px;
+}
+li#clana:hover{
+    cursor: pointer;
+    color: aqua;
 }

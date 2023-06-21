@@ -34,7 +34,7 @@ ctx.fillText("Waves", 10, 10);
 ctx.restore();
 //wave drawing
 ctx.strokeStyle = "#0c0d0d";
-
+//waves
 ctx.beginPath();
 ctx.moveTo(400, 50);
 ctx.lineWidth = 3;
@@ -65,9 +65,17 @@ ctx.stroke();
     var myMenu = document.querySelector("#myMenu");
     var close = document.querySelector("#close");
     var navbar = document.querySelector("#navbar");
-
+    //new ids
+    var mea = document.querySelector("#mea");
+    var movementeffects = document.querySelector("#movementeffects");
+    var clmea = document.querySelector("#clmea");
+    
+    
     myMenu.addEventListener("click", openMenu, false);
     close.addEventListener("click", closeMe, false);
+    //new
+    mea.addEventListener("click", openME, false);
+    clmea.addEventListener("click", closeMea, false);
     
     function openMenu(){
         //unhide the navbar
@@ -79,6 +87,53 @@ ctx.stroke();
         //hide the navbar
         navbar.style.display ="none";
         myMenu.style.display ="block";
-        main.style.marginLeft = "0";
+        
+    }
+    
+    //new function
+    function openME(){
+        movementeffects.style.display = "inherit";
+    }
+    function closeMea(){
+        movementeffects.style.display = "none";
+    }
+
+
+    var hea = document.querySelector("#hea");
+    var hovereffects = document.querySelector("#hovereffects");
+    var clhea = document.querySelector("#clhea");
+    hea.addEventListener("click", openHe, false);
+    clhea.addEventListener("click", closeHe, false);
+    function openHe(){
+        hovereffects.style.display = "inherit";
+    }
+    function closeHe(){
+        hovereffects.style.display = "none";
+    }
+
+    var tra = document.querySelector("#tra");
+    var transitions = document.querySelector("#transitions");
+    var cltra = document.querySelector("#cltra");
+    tra.addEventListener("click", openTra, false);
+    cltra.addEventListener("click", closeTra, false);
+    function openTra(){
+        transitions.style.display = "inherit";
+    }
+    function closeTra(){
+        transitions.style.display = "none";
+    }
+
+    var ana = document.querySelector("#ana");
+    var animations = document.querySelector("#animations");
+    var clana = document.querySelector("#clana");
+    ana.addEventListener("click", openAna, false);
+    clana.addEventListener("click", closeAna, false);
+    function openAna(){
+        animations.style.display = "inherit";
+    }
+    function closeAna(){
+        animations.style.display = "none";
     }
 }
+
+
