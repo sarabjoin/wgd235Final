@@ -134,6 +134,7 @@ ul{
     background-color: white;
     animation:animatetop 0.4s ease;
     z-index: -5;
+    background-color: white;
 }
 
 #a1{ animation: move1 5s 3;}
@@ -284,7 +285,7 @@ ul{
     width:50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #ff5722;
+    background-color: #3f8a87;
     display: inline-block;
     animation: bounce .5s;
     animation-direction: alternate;
